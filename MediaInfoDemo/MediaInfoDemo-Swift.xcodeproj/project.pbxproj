@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		268EE8C81BA8A6D000D294E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268EE8C71BA8A6D000D294E9 /* AppDelegate.swift */; };
+		268EE8CD1BA8A6D000D294E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268EE8CB1BA8A6D000D294E9 /* MainMenu.xib */; };
+		268EEBE61BA8D07500D294E9 /* BBB.mov in Resources */ = {isa = PBXBuildFile; fileRef = 268EEBE51BA8D07500D294E9 /* BBB.mov */; settings = {ASSET_TAGS = (); }; };
+		268EEBE91BA8DA2400D294E9 /* MediaInfoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEBE31BA8D06100D294E9 /* MediaInfoKit.framework */; };
+		268EEBEA1BA8DA2400D294E9 /* MediaInfoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 268EEBE31BA8D06100D294E9 /* MediaInfoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		268EEBE21BA8D06100D294E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268EEBDE1BA8D06100D294E9 /* MediaInfoKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 268EEB051BA8C79B00D294E9;
+			remoteInfo = MediaInfoKit;
+		};
+		268EEBEB1BA8DA2400D294E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268EEBDE1BA8D06100D294E9 /* MediaInfoKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 268EEB041BA8C79B00D294E9;
+			remoteInfo = MediaInfoKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		268EEA3C1BA8B74800D294E9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				268EEBEA1BA8DA2400D294E9 /* MediaInfoKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		268EE8C41BA8A6D000D294E9 /* MediaInfoDemo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediaInfoDemo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		268EE8C71BA8A6D000D294E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		268EE8CC1BA8A6D000D294E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		268EE8CE1BA8A6D000D294E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		268EEA3B1BA8B5F100D294E9 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		268EEBDE1BA8D06100D294E9 /* MediaInfoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaInfoKit.xcodeproj; path = ../MediaInfoKit.xcodeproj; sourceTree = "<group>"; };
+		268EEBE51BA8D07500D294E9 /* BBB.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BBB.mov; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		268EE8C11BA8A6D000D294E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268EEBE91BA8DA2400D294E9 /* MediaInfoKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		268EE8BB1BA8A6D000D294E9 = {
+			isa = PBXGroup;
+			children = (
+				268EE8C61BA8A6D000D294E9 /* MediaInfoDemo */,
+				268EEBE41BA8D06400D294E9 /* Frameworks */,
+				268EE8C51BA8A6D000D294E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		268EE8C51BA8A6D000D294E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				268EE8C41BA8A6D000D294E9 /* MediaInfoDemo-Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		268EE8C61BA8A6D000D294E9 /* MediaInfoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				268EEBE51BA8D07500D294E9 /* BBB.mov */,
+				268EEA3B1BA8B5F100D294E9 /* BridgingHeader.h */,
+				268EE8C71BA8A6D000D294E9 /* AppDelegate.swift */,
+				268EE8CB1BA8A6D000D294E9 /* MainMenu.xib */,
+				268EE8CE1BA8A6D000D294E9 /* Info.plist */,
+			);
+			name = MediaInfoDemo;
+			path = "MediaInfoDemo-Swift";
+			sourceTree = "<group>";
+		};
+		268EEBDF1BA8D06100D294E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				268EEBE31BA8D06100D294E9 /* MediaInfoKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		268EEBE41BA8D06400D294E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				268EEBDE1BA8D06100D294E9 /* MediaInfoKit.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		268EE8C31BA8A6D000D294E9 /* MediaInfoDemo-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 268EE8D11BA8A6D000D294E9 /* Build configuration list for PBXNativeTarget "MediaInfoDemo-Swift" */;
+			buildPhases = (
+				268EE8C01BA8A6D000D294E9 /* Sources */,
+				268EE8C11BA8A6D000D294E9 /* Frameworks */,
+				268EE8C21BA8A6D000D294E9 /* Resources */,
+				268EEA3C1BA8B74800D294E9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				268EEBEC1BA8DA2400D294E9 /* PBXTargetDependency */,
+			);
+			name = "MediaInfoDemo-Swift";
+			productName = "MediaInfoDemo-Swift";
+			productReference = 268EE8C41BA8A6D000D294E9 /* MediaInfoDemo-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		268EE8BC1BA8A6D000D294E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jeremy Vizzini";
+				TargetAttributes = {
+					268EE8C31BA8A6D000D294E9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 268EE8BF1BA8A6D000D294E9 /* Build configuration list for PBXProject "MediaInfoDemo-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 268EE8BB1BA8A6D000D294E9;
+			productRefGroup = 268EE8C51BA8A6D000D294E9 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 268EEBDF1BA8D06100D294E9 /* Products */;
+					ProjectRef = 268EEBDE1BA8D06100D294E9 /* MediaInfoKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				268EE8C31BA8A6D000D294E9 /* MediaInfoDemo-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		268EEBE31BA8D06100D294E9 /* MediaInfoKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MediaInfoKit.framework;
+			remoteRef = 268EEBE21BA8D06100D294E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		268EE8C21BA8A6D000D294E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268EE8CD1BA8A6D000D294E9 /* MainMenu.xib in Resources */,
+				268EEBE61BA8D07500D294E9 /* BBB.mov in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		268EE8C01BA8A6D000D294E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268EE8C81BA8A6D000D294E9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		268EEBEC1BA8DA2400D294E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MediaInfoKit;
+			targetProxy = 268EEBEB1BA8DA2400D294E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		268EE8CB1BA8A6D000D294E9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				268EE8CC1BA8A6D000D294E9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		268EE8CF1BA8A6D000D294E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		268EE8D01BA8A6D000D294E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		268EE8D21BA8A6D000D294E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "MediaInfoDemo-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremyvizzini.com.MediaInfoDemo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MediaInfoDemo-Swift/BridgingHeader.h";
+			};
+			name = Debug;
+		};
+		268EE8D31BA8A6D000D294E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "MediaInfoDemo-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremyvizzini.com.MediaInfoDemo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MediaInfoDemo-Swift/BridgingHeader.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		268EE8BF1BA8A6D000D294E9 /* Build configuration list for PBXProject "MediaInfoDemo-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268EE8CF1BA8A6D000D294E9 /* Debug */,
+				268EE8D01BA8A6D000D294E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		268EE8D11BA8A6D000D294E9 /* Build configuration list for PBXNativeTarget "MediaInfoDemo-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268EE8D21BA8A6D000D294E9 /* Debug */,
+				268EE8D31BA8A6D000D294E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 268EE8BC1BA8A6D000D294E9 /* Project object */;
+}
