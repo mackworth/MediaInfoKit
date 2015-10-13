@@ -1,3 +1,6 @@
+MediaInfoKit is under developement.
+The project doesn't work for the moment.
+
 # MediaInfoKit for OS X
 
 ## Introduction
