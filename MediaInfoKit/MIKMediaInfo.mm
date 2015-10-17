@@ -128,7 +128,7 @@ static const NSInteger paddingLenth = 30;
 
 - (nullable NSString *)valueAtIndex:(NSInteger)index forStreamKey:(NSString *)streamKey {
     NSString *key = [self keyAtIndex:index forStreamKey:streamKey];
-    return [self valueForKey:key streamKey:key];
+    return [self valueForKey:key streamKey:streamKey];
 }
 
 - (nullable NSString *)valueForKey:(NSString *)infoKey streamKey:(NSString *)streamKey {

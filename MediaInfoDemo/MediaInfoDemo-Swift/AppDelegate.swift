@@ -32,6 +32,7 @@ public class AppDelegate: NSObject {
         if info == nil {
             fatalError("The movie is not readable by mediainfolib")
         }
+        print(info!.text)
         return info!
     }()
 }

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		262590FC1BCC129300F1C94A /* libmediainfo.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 268EEB741BA8C94900D294E9 /* libmediainfo.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		26194ED81BD2FC5B00F1FB25 /* libmediainfo.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 268EEB741BA8C94900D294E9 /* libmediainfo.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2624A61A1BD2FF8C000C340B /* libmediainfo.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEB741BA8C94900D294E9 /* libmediainfo.0.dylib */; };
 		268EEB091BA8C79B00D294E9 /* MediaInfoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB081BA8C79B00D294E9 /* MediaInfoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		268EEB141BA8C89400D294E9 /* MIKMediaInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB101BA8C89400D294E9 /* MIKMediaInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		268EEB151BA8C89400D294E9 /* MIKMediaInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 268EEB111BA8C89400D294E9 /* MIKMediaInfo.mm */; settings = {ASSET_TAGS = (); }; };
 		268EEB161BA8C89400D294E9 /* NSString+MIK.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB121BA8C89400D294E9 /* NSString+MIK.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		268EEB171BA8C89400D294E9 /* NSString+MIK.mm in Sources */ = {isa = PBXBuildFile; fileRef = 268EEB131BA8C89400D294E9 /* NSString+MIK.mm */; settings = {ASSET_TAGS = (); }; };
 		268EEBB91BA8C94900D294E9 /* MediaInfoDLL.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB621BA8C94900D294E9 /* MediaInfoDLL.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		268EEBC91BA8C94900D294E9 /* libmediainfo.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEB741BA8C94900D294E9 /* libmediainfo.0.dylib */; settings = {ASSET_TAGS = (); }; };
 		268EEBCF1BA8CB8600D294E9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEBCE1BA8CB8600D294E9 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,9 +23,9 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
-			dstSubfolderSpec = 6;
+			dstSubfolderSpec = 10;
 			files = (
-				262590FC1BCC129300F1C94A /* libmediainfo.0.dylib in CopyFiles */,
+				26194ED81BD2FC5B00F1FB25 /* libmediainfo.0.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2624A61A1BD2FF8C000C340B /* libmediainfo.0.dylib in Frameworks */,
 				268EEBCF1BA8CB8600D294E9 /* Cocoa.framework in Frameworks */,
-				268EEBC91BA8C94900D294E9 /* libmediainfo.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +507,7 @@
 		268EEB0E1BA8C79B00D294E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -515,7 +516,8 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = MediaInfoKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_GENERATE_MAP_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MediaInfoLib",
@@ -523,6 +525,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.com.MediaInfoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_PATHS = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -530,6 +533,7 @@
 		268EEB0F1BA8C79B00D294E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -538,7 +542,8 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = MediaInfoKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_GENERATE_MAP_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MediaInfoLib",
@@ -546,6 +551,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.com.MediaInfoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_PATHS = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
