@@ -1,3 +1,5 @@
+Cocoa pods is not installed yet !!!!
+
 # MediaInfoKit for OS X
 
 ## Introduction
