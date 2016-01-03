@@ -78,7 +78,9 @@ if info.writeAsFormat(.JSON,  toURL: exportURL) {
 ## Installation
 
 You can simply add MediaInfoKit as a git submodule and just drag the MediaInfoKit.xcodeproj file into your Xcode project and add MediaInfoKit.xcodeproj as a dependency for your target.    
-Xcode 7 won't compile MediaInfoKit as it. To successfully, you have to sign MediaInfoKit with an apple developer ID.
+Xcode 7 won't compile MediaInfoKit as it. To successfully compile, you have to sign MediaInfoKit with an apple developer account.
+
+![How to sign framework](./images/how_to_sign_framework.png)
 
 ## About
 
