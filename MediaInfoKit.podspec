@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/jeremyvizzini/MediaInfoKit/"
   s.license      = 'MIT'
   s.author       = { "Jeremy Vizzini" => "contact@jeremyvizzini.com" }
-  s.source       = { :git => "https://github.com/jeremyvizzini/MediaInfoKit.git" }
+  s.source       = { :git => "https://github.com/jeremyvizzini/MediaInfoKit.git", :tag => '0.0.1' }
   s.platform     = :osx
   s.requires_arc = true
   s.source_files = 'MediaInfoKit/*.{h,m,mm}', 'MediaInfoLib/Developpers/Include/MediaInfoDLL/MediaInfoDLL.h'
