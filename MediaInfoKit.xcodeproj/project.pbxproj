@@ -11,11 +11,13 @@
 		2624A61A1BD2FF8C000C340B /* libmediainfo.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEB741BA8C94900D294E9 /* libmediainfo.0.dylib */; };
 		268EEB091BA8C79B00D294E9 /* MediaInfoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB081BA8C79B00D294E9 /* MediaInfoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		268EEB141BA8C89400D294E9 /* MIKMediaInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB101BA8C89400D294E9 /* MIKMediaInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		268EEB151BA8C89400D294E9 /* MIKMediaInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 268EEB111BA8C89400D294E9 /* MIKMediaInfo.mm */; settings = {ASSET_TAGS = (); }; };
+		268EEB151BA8C89400D294E9 /* MIKMediaInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 268EEB111BA8C89400D294E9 /* MIKMediaInfo.mm */; };
 		268EEB161BA8C89400D294E9 /* NSString+MIK.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB121BA8C89400D294E9 /* NSString+MIK.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		268EEB171BA8C89400D294E9 /* NSString+MIK.mm in Sources */ = {isa = PBXBuildFile; fileRef = 268EEB131BA8C89400D294E9 /* NSString+MIK.mm */; settings = {ASSET_TAGS = (); }; };
+		268EEB171BA8C89400D294E9 /* NSString+MIK.mm in Sources */ = {isa = PBXBuildFile; fileRef = 268EEB131BA8C89400D294E9 /* NSString+MIK.mm */; };
 		268EEBB91BA8C94900D294E9 /* MediaInfoDLL.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB621BA8C94900D294E9 /* MediaInfoDLL.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		268EEBCF1BA8CB8600D294E9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEBCE1BA8CB8600D294E9 /* Cocoa.framework */; };
+		26C3EA551BE75CF400CC0EF6 /* MIKConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 26C3EA531BE75CF400CC0EF6 /* MIKConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26C3EA561BE75CF400CC0EF6 /* MIKConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EA541BE75CF400CC0EF6 /* MIKConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,6 +129,8 @@
 		268EEB751BA8C94900D294E9 /* License.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = License.html; sourceTree = "<group>"; };
 		268EEB761BA8C94900D294E9 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		268EEBCE1BA8CB8600D294E9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		26C3EA531BE75CF400CC0EF6 /* MIKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIKConstants.h; sourceTree = "<group>"; };
+		26C3EA541BE75CF400CC0EF6 /* MIKConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIKConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				268EEB081BA8C79B00D294E9 /* MediaInfoKit.h */,
 				268EEB101BA8C89400D294E9 /* MIKMediaInfo.h */,
 				268EEB111BA8C89400D294E9 /* MIKMediaInfo.mm */,
+				26C3EA531BE75CF400CC0EF6 /* MIKConstants.h */,
+				26C3EA541BE75CF400CC0EF6 /* MIKConstants.m */,
 				268EEB121BA8C89400D294E9 /* NSString+MIK.h */,
 				268EEB131BA8C89400D294E9 /* NSString+MIK.mm */,
 				268EEB0A1BA8C79B00D294E9 /* Info.plist */,
@@ -339,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				268EEB161BA8C89400D294E9 /* NSString+MIK.h in Headers */,
+				26C3EA551BE75CF400CC0EF6 /* MIKConstants.h in Headers */,
 				268EEBB91BA8C94900D294E9 /* MediaInfoDLL.h in Headers */,
 				268EEB091BA8C79B00D294E9 /* MediaInfoKit.h in Headers */,
 				268EEB141BA8C89400D294E9 /* MIKMediaInfo.h in Headers */,
@@ -378,6 +385,7 @@
 				TargetAttributes = {
 					268EEB041BA8C79B00D294E9 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = JVTX6KC453;
 					};
 				};
 			};
@@ -415,6 +423,7 @@
 			files = (
 				268EEB151BA8C89400D294E9 /* MIKMediaInfo.mm in Sources */,
 				268EEB171BA8C89400D294E9 /* NSString+MIK.mm in Sources */,
+				26C3EA561BE75CF400CC0EF6 /* MIKConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -525,6 +535,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.com.MediaInfoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				REEXPORTED_LIBRARY_PATHS = "";
 				SKIP_INSTALL = YES;
 			};
@@ -534,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -551,6 +563,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.com.MediaInfoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				REEXPORTED_LIBRARY_PATHS = "";
 				SKIP_INSTALL = YES;
 			};

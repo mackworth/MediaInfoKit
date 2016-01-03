@@ -27,13 +27,13 @@ public class AppDelegate: NSObject {
     }
     
     public lazy var mediaInfo: MIKMediaInfo = {
-        let movieURL = self.movieFileURL!
-        let info = MIKMediaInfo(fileURL: movieURL)
-        if info == nil {
-            fatalError("The movie is not readable by mediainfolib")
+        guard let movieURL = self.movieFileURL else {
+            fatalError("The movie cannot be found.")
         }
-        print(info!.text)
-        return info!
+        guard let info = MIKMediaInfo(fileURL: movieURL) else {
+            fatalError("The movie is not readable by mediainfolib.")
+        }
+        return info
     }()
 }
 
@@ -58,7 +58,7 @@ extension AppDelegate: NSTableViewDataSource {
             let index = self.streamsTableView.selectedRow
             if index >= 0 && index < self.mediaInfo.streamKeys.count {
                 let streamKey = self.mediaInfo.streamKeys[index]
-                return self.mediaInfo.infoCountForStreamKey(streamKey)
+                return self.mediaInfo.countOfValuesForStreamKey(streamKey)
             } else {
                 return 0
             }

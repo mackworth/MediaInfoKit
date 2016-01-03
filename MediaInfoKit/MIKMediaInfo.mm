@@ -5,18 +5,13 @@
 //  Created by Jeremy Vizzini.
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
 //
+// References : https://mediaarea.net/fr/MediaInfo/Support/SDK/Quick_Start#Quick_Start
 
 #import "MIKMediaInfo.h"
 #import "NSString+MIK.h"
 
 #define _UNICODE
 #import "MediaInfoDLL.h"
-
-NSString * const GeneralStreamKey = @"General";
-NSString * const VideoStreamKey   = @"Video";
-NSString * const AudioStreamKey   = @"Audio";
-NSString * const Audio1StreamKey  = @"Audio #1";
-NSString * const Audio2StreamKey  = @"Audio #2";
 
 static const NSInteger paddingLenth = 30;
 
@@ -105,21 +100,21 @@ static const NSInteger paddingLenth = 30;
 }
 
 
-- (NSDictionary<NSString *, NSString *> *)infoForStreamKey:(NSString *)streamKey {
+- (NSDictionary<NSString *, NSString *> *)valuesForStreamKey:(NSString *)streamKey {
     return (self.streamsInfo[streamKey]) ?: @{};
 }
 
 - (NSDictionary *)streams {
     NSMutableDictionary *streams = [NSMutableDictionary dictionary];
     for (NSString *streamKey in self.streamKeys) {
-        NSDictionary *streamInfo = [self infoForStreamKey:streamKey];
+        NSDictionary *streamInfo = [self valuesForStreamKey:streamKey];
         [streams setObject:streamInfo forKey:streamKey];
     }
     return streams;
 }
 
-- (NSInteger)infoCountForStreamKey:(NSString *)streamKey {
-    return [self infoForStreamKey:streamKey].count;
+- (NSInteger)countOfValuesForStreamKey:(NSString *)streamKey {
+    return [self valuesForStreamKey:streamKey].count;
 }
 
 - (nullable NSString *)keyAtIndex:(NSInteger)index forStreamKey:(NSString *)streamKey {
@@ -132,7 +127,7 @@ static const NSInteger paddingLenth = 30;
 }
 
 - (nullable NSString *)valueForKey:(NSString *)infoKey streamKey:(NSString *)streamKey {
-    return [self infoForStreamKey:streamKey][infoKey];
+    return [self valuesForStreamKey:streamKey][infoKey];
 }
 
 #pragma mark Text representation
@@ -142,7 +137,7 @@ static const NSInteger paddingLenth = 30;
 
     for (NSString *streamKey in self.streamKeys) {
         [text appendFormat:@"%@ :\n", streamKey];
-        [self enumerateInfoForStreamKey:streamKey inOrder:YES block:^(NSString *key, NSString *val) {
+        [self enumerateValuesForStreamKey:streamKey inOrder:YES block:^(NSString *key, NSString *val) {
             key = [key stringByPaddingToLength:paddingLenth withString:@" " startingAtIndex:0];
             [text appendFormat:@"%@ : %@\n", key, val];
         }];
@@ -164,7 +159,7 @@ static const NSInteger paddingLenth = 30;
     for (NSString *streamKey in self.streamKeys) {
         [text mik_appendAtrributes:titleAttr string:streamKey];
         [text mik_appendAtrributes:titleAttr string:@"\n"];
-        [self enumerateInfoForStreamKey:streamKey inOrder:YES block:^(NSString *key, NSString *val) {
+        [self enumerateValuesForStreamKey:streamKey inOrder:YES block:^(NSString *key, NSString *val) {
             key = [key stringByPaddingToLength:paddingLenth withString:@" " startingAtIndex:0];
             NSString *line = [NSString stringWithFormat:@"%@ : %@\n", key, val];
             [text mik_appendAtrributes:valueAttr string:line];
@@ -181,17 +176,17 @@ static const NSInteger paddingLenth = 30;
 
 #pragma mark Enumeration
 
-- (void)enumerateInfoForStreamKey:(NSString *)streamKey block:(StreamEnumerationBlock)block {
-    [self enumerateInfoForStreamKey:streamKey inOrder:NO block:block];
+- (void)enumerateValuesForStreamKey:(NSString *)streamKey block:(MIKStreamEnumerationBlock)block {
+    [self enumerateValuesForStreamKey:streamKey inOrder:NO block:block];
 }
 
-- (void)enumerateOrderedInfoForStreamKey:(NSString *)streamKey block:(StreamEnumerationBlock)block {
-    [self enumerateInfoForStreamKey:streamKey inOrder:YES block:block];
+- (void)enumerateOrderedValuesForStreamKey:(NSString *)streamKey block:(MIKStreamEnumerationBlock)block {
+    [self enumerateValuesForStreamKey:streamKey inOrder:YES block:block];
 }
 
-- (void)enumerateInfoForStreamKey:(NSString *)streamKey
-                          inOrder:(BOOL)ordered
-                            block:(StreamEnumerationBlock)block
+- (void)enumerateValuesForStreamKey:(NSString *)streamKey
+                            inOrder:(BOOL)ordered
+                              block:(MIKStreamEnumerationBlock)block
 {
     NSDictionary *info = self.streamsInfo[streamKey];
     NSArray *keys = (ordered) ? self.streamsOrder[streamKey] : info.allKeys;
@@ -234,7 +229,7 @@ static const NSInteger paddingLenth = 30;
     NSMutableString *xmlString = [[NSMutableString alloc] init];
     
     for (NSString *streamKey in self.streamKeys) {
-        NSDictionary *streamInfo = [self infoForStreamKey:streamKey];
+        NSDictionary *streamInfo = [self valuesForStreamKey:streamKey];
         [xmlString appendFormat:@"<%@>\n", streamKey];
         for (NSString *key in [streamInfo allKeys]) {
             NSString *value = streamInfo[key];
@@ -270,7 +265,7 @@ static const NSInteger paddingLenth = 30;
 }
 
 + (NSString *)extensionForFormat:(MIKExportFormat)format {
-    NSString *extension;
+    NSString *extension = nil;
     switch (format) {
         case MIKExportFormatTXT:   extension = @"txt";   break;
         case MIKExportFormatRTF:   extension = @"rtf";   break;
@@ -314,7 +309,12 @@ static const NSInteger paddingLenth = 30;
     return success;
 }
 
-#pragma mark Change language
+#pragma mark Options
+
++ (void)setUseInternetConnection:(BOOL)use {
+    const wchar_t *value = use ? [@"No" mik_WCHARString] : [@"Yes" mik_WCHARString];
+    MediaInfoDLL::MediaInfo::Option_Static([@"Internet" mik_WCHARString], value);
+}
 
 + (void)setLanguageWithContents:(NSString *)langContents {
     MediaInfoDLL::MediaInfo::Option_Static([@"Language" mik_WCHARString], [langContents mik_WCHARString]);
