@@ -32,21 +32,53 @@ The repository is composed of MediaInfoKit and of two samples (one written in Ob
 
 The frameworks is based on only one class named `MIKMediaInfo`. This class allow you to access to the metadatas in constant time via dictionary and it also permits you to get the original ordered list of metadata created by mediainfolib.
 
-Objective-C code example :
+Swift code example: (Objective-C version is similar)
 
 ```
+// Create a MIKMediaInfo instance for a specified file
 
-```
+let bundle = NSBundle.mainBundle()
+guard let movieURL = bundle.URLForResource("movie", withExtension: "mov") else {
+    fatalError("The movie cannot be found.")
+}
 
-Swift code example:
+guard let info = MIKMediaInfo(fileURL: movieURL) else {
+    fatalError("The movie is not readable by mediainfolib.")
+}
 
-```
+
+// Get a single value for a key in constant time
+
+let value = info.valueForKey(MIKCompleteNameKey, streamKey: MIKGeneralStreamKey)
+
+
+// Get a single value at an index in constant time
+
+let value = valueAtIndex(2, streamKey: MIKGeneralStreamKey)
+
+
+// Enumerate all values by keeping the original order
+
+info.enumerateOrderedValuesForStreamKey(MIKVideoStreamKey) { key, value in
+    print("\(key) : \(value)")
+}
+
+
+// Export all information with the specified format
+
+let exportExt = MIKMediaInfo.extensionForFormat(.JSON)
+let exportURL = movieURL.URLByAppendingPathExtension(exportExt)
+
+if (info.writeAsFormat(.JSON,  toURL: exportURL)) {
+    print("File was written successfully").
+}
 
 ```
 
 ## Installation
 
-You can somply add MediaInfoKit as a git submodule and just drag the MediaInfoKit.xcodeproj file into your Xcode project and add MediaInfoKit.xcodeproj as a dependency for your target.
+You can simply add MediaInfoKit as a git submodule and just drag the MediaInfoKit.xcodeproj file into your Xcode project and add MediaInfoKit.xcodeproj as a dependency for your target.
+Xcode 7 won't compile MediaInfoKit as it. To successfully, you have to sign MediaInfoKit with an apple developer ID.
 
 ## About
 
