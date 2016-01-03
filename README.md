@@ -30,7 +30,7 @@ The repository is composed of MediaInfoKit and of two samples (one written in Ob
 
 ## How to use it
 
-The frameworks is based on only one class named `MIKMediaInfo`. This class allow you to access to the metadatas in constant time via dictionary and it also permits you to get the original ordered list of metadata created by mediainfolib.
+The frameworks is based on only one class named `MIKMediaInfo`. This class allow you to access to the metadatas in constant time via dictionary and it also permits you to get the original ordered list of metadatas created by mediainfolib.
 
 Swift code example: (Objective-C version is similar)
 
