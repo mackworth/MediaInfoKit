@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :osx
   s.requires_arc = true
   s.source_files = 'MediaInfoKit/*.{h,m,mm}', 'MediaInfoLib/Developpers/Include/MediaInfoDLL/MediaInfoDLL.h'
+  s.vendored_library = 'MediaInfoLib/libmediainfo.0.dylib'
   s.osx.deployment_target = '10.8'
   s.osx.frameworks   = 'Cocoa'
 end
