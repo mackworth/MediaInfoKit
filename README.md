@@ -2,6 +2,8 @@ Cocoa pods is not installed yet !!!!
 
 # MediaInfoKit for OS X
 
+![Screenshot of the samples](./images/screen_samples.png)
+
 ## Introduction
 
 MediaInfoKit is a very simple high level wrapper of MediaInfo library for OSX applications.
