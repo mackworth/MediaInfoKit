@@ -71,7 +71,9 @@ extension AppDelegate: NSTableViewDataSource {
         } else {
             let index = self.streamsTableView.selectedRow
             let streamKey = self.mediaInfo.streamKeys[index]
-            if tableColumn?.title == "Key" {
+            if self.mediaInfo.countOfValuesForStreamKey(streamKey) <= row {
+                return nil
+            } else if tableColumn?.title == "Key" {
                 return self.mediaInfo.keyAtIndex(row, forStreamKey: streamKey)
             } else {
                 return self.mediaInfo.valueAtIndex(row, forStreamKey: streamKey)
