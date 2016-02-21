@@ -10,32 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- *  The different export formats available.
- */
-typedef NS_ENUM(NSUInteger, MIKExportFormat) {
-    /**
-     *  Export mediainfo as a plain text.
-     */
-    MIKExportFormatTXT,
-    /**
-     *  Export mediainfo as a rich text.
-     */
-    MIKExportFormatRTF,
-    /**
-     *  Export mediainfo in a XML format.
-     */
-    MIKExportFormatXML,
-    /**
-     *  Export mediainfo in a JSON format.
-     */
-    MIKExportFormatJSON,
-    /**
-     *  Export mediainfo in a PLIST format.
-     */
-    MIKExportFormatPLIST
-};
-
+#import "MIKFormats.h"
 #pragma mark - MIKMediaInfo
 
 /**
@@ -120,6 +95,28 @@ typedef NS_ENUM(NSUInteger, MIKExportFormat) {
  *  The formated string representation of all the mediainfo information.
  */
 @property (readonly, strong, nonatomic) NSAttributedString *attributedText;
+
+/**
+ *  The XML representation of all the mediainfo information.
+ */
+@property (readonly, strong, nonatomic) NSString *xmlText;
+
+/**
+ *  The JSON representation of all the mediainfo information.
+ */
+@property (readonly, strong, nonatomic) NSString *jsonText;
+
+/**
+ *  The JSON representation of all the mediainfo information.
+ */
+@property (readonly, strong, nonatomic) NSString *pListText;
+
+/**
+ *  The contents of the receiver using the specified format.
+ *
+ *  @param format  The export format.
+ */
+-(NSAttributedString *) attributedTextForFormat: (MIKExportFormat) format ;
 
 #pragma mark Enumeration
 
