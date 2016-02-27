@@ -8,9 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "MIKFormats.h"
 NS_ASSUME_NONNULL_BEGIN
 
-#import "MIKFormats.h"
 #pragma mark - MIKMediaInfo
 
 /**
