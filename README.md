@@ -1,5 +1,3 @@
-Cocoa pods is not installed yet !!!!
-
 # MediaInfoKit for OS X
 
 ![Screenshot of the samples](./images/screen_samples.png)
@@ -80,6 +78,8 @@ if info.writeAsFormat(.JSON,  toURL: exportURL) {
 ```
 
 ## Installation
+
+You cannot install MediaInfoKit by using cocoapods because of the framework includes a dynamic library.
 
 You can simply add MediaInfoKit as a git submodule and just drag the MediaInfoKit.xcodeproj file into your Xcode project and add MediaInfoKit.xcodeproj as a dependency for your target.    
 Xcode 7 won't compile MediaInfoKit as it. To successfully compile, you have to sign MediaInfoKit with an apple developer account.
