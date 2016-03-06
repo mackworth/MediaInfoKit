@@ -16,27 +16,17 @@
 
 @implementation MIKViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 -(void) viewWillAppear {
     self.representedObject = [[NSDocumentController sharedDocumentController] documentForWindow:[[self view] window]];
 }
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-}
-
 #pragma mark Actions
--(IBAction) changeFormat:(NSPopUpButton *)popup {
-}
 
 - (IBAction)showMovie:(id)sender {
     [(Document *)self.representedObject playMovieFile];
 }
 
-- (IBAction)extractInfo:(id)sender {
+-(IBAction)saveDocumentAs: (id) sender {
     Document * document = (Document *)self.representedObject;
     MIKExportFormat format = self.formatPopUp.indexOfSelectedItem;
     NSString *formatExtension = [document extensionForFormat: format];

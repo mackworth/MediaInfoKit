@@ -677,7 +677,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="dlB-tE-4su"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Show Movie" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GAi-ef-7mf">
+                                <buttonCell key="cell" type="push" title="Show Video" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GAi-ef-7mf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -687,12 +687,15 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-bJ-woE">
                                 <rect key="frame" x="389" y="5" width="110" height="32"/>
-                                <buttonCell key="cell" type="push" title="Extract Info" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aea-IN-oMU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="QdN-zw-Cwx"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Save As..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aea-IN-oMU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="extractInfo:" target="5gI-5U-AMq" id="4jc-f9-X95"/>
+                                    <action selector="saveDocumentAs:" target="5gI-5U-AMq" id="f3I-h3-lZt"/>
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QZW-dD-sW9">
@@ -734,7 +737,11 @@
                                             <size key="minSize" width="548" height="225"/>
                                             <size key="maxSize" width="628" height="10000000"/>
                                             <connections>
-                                                <binding destination="5gI-5U-AMq" name="attributedString" keyPath="self.representedObject.attributedString" id="xea-t6-JYB"/>
+                                                <binding destination="5gI-5U-AMq" name="attributedString" keyPath="self.representedObject.attributedString" id="nmS-7A-5L6">
+                                                    <dictionary key="options">
+                                                        <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textView>
                                     </subviews>

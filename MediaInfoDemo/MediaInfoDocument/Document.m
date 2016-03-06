@@ -8,7 +8,6 @@
 
 #import "Document.h"
 #import <MediaInfoKit/MediaInfoKit.h>
-#import "MIKViewController.h"
 
 @interface Document ()
 @property (strong) MIKMediaInfo *mediaInfo;
@@ -23,7 +22,7 @@
     self = [super init];
     if (self) {
         self.attributedString = [[NSAttributedString alloc] initWithString:@"No Video File loaded."];
-        self.format = MIKExportFormatTXT;
+        self.format = MIKExportFormatRTF;
     }
     return self;
 }
