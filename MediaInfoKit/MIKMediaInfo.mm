@@ -75,7 +75,7 @@ static const NSInteger paddingLenth = 30;
                 streamName = nil;
             }
         } else {
-            NSArray *components = [line componentsSeparatedByString:@":"];
+            NSArray *components = [line componentsSeparatedByString:@": "];
             if (components.count == 1) {
                 streamName = [components[0] mik_trimmed];
                 currStreamOrder = [NSMutableArray array];

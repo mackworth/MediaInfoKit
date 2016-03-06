@@ -717,7 +717,6 @@
                                     </menu>
                                 </popUpButtonCell>
                                 <connections>
-                                    <action selector="changeFormat:" target="5gI-5U-AMq" id="dNl-JL-c5w"/>
                                     <binding destination="5gI-5U-AMq" name="selectedIndex" keyPath="self.representedObject.format" id="V0W-WK-V0Q"/>
                                 </connections>
                             </popUpButton>
