@@ -75,7 +75,7 @@ static const NSInteger paddingLenth = 30;
                 streamName = nil;
             }
         } else {
-            NSArray *components = [line componentsSeparatedByString:@":"];
+            NSArray *components = [line componentsSeparatedByString:@": "];
             if (components.count == 1) {
                 streamName = [components[0] mik_trimmed];
                 currStreamOrder = [NSMutableArray array];
@@ -174,6 +174,70 @@ static const NSInteger paddingLenth = 30;
     return text;
 }
 
+-(NSString *) xmlText {
+    NSMutableString *xmlString = [[NSMutableString alloc] init];
+
+    for (NSString *streamKey in self.streamKeys) {
+        NSDictionary *streamInfo = [self valuesForStreamKey:streamKey];
+        [xmlString appendFormat:@"<%@>\n", streamKey];
+        for (NSString *key in [streamInfo allKeys]) {
+            NSString *value = streamInfo[key];
+            [xmlString appendFormat:@"    <%@>%@</%@>\n", key, value, key];
+        }
+        [xmlString appendFormat:@"</%@>\n", streamKey];
+    }
+    return [NSString stringWithString:xmlString];
+}
+
+-(NSString *) jsonText {
+    NSError * jsonError = nil;
+    NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:[self streams]
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&jsonError];
+    if (jsonData) {
+        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    } else {
+        NSLog(@"%@ %s jsonError: error: %@", self, __PRETTY_FUNCTION__,jsonError.localizedDescription);
+        return @"{}";
+    }
+}
+
+-(NSString *) pListText {
+    NSError * plistError = nil;
+    NSData * plistData =  [NSPropertyListSerialization dataWithPropertyList:[self streams] format:NSPropertyListXMLFormat_v1_0 options:0 error:&plistError];
+
+    if (plistData) {
+        return [[NSString alloc] initWithData:plistData encoding:NSUTF8StringEncoding];
+    } else {
+        NSLog(@"%@ %s plistError: error: %@", self, __PRETTY_FUNCTION__,plistError.localizedDescription);
+        return @"{}";
+    }
+}
+
+-(NSAttributedString *) attributedTextForFormat:(MIKExportFormat) format {
+    switch (format) {
+        case MIKExportFormatTXT:
+            return [[NSAttributedString alloc] initWithString: [self text]];
+            break;
+        case MIKExportFormatRTF:
+            return [self attributedText];
+            break;
+        case MIKExportFormatXML:
+            return [[NSAttributedString alloc] initWithString: [self xmlText]];
+            break;
+        case MIKExportFormatJSON:
+            return [[NSAttributedString alloc] initWithString: [self jsonText]];
+            break;
+        case MIKExportFormatPLIST:
+            return [[NSAttributedString alloc] initWithString: [self pListText]];
+            break;
+        default:
+            NSLog(@"%@ %s format argument is invalid", self, __PRETTY_FUNCTION__);
+            break;
+    }
+
+}
+
 #pragma mark Enumeration
 
 - (void)enumerateValuesForStreamKey:(NSString *)streamKey block:(MIKStreamEnumerationBlock)block {
@@ -226,18 +290,8 @@ static const NSInteger paddingLenth = 30;
 }
 
 - (BOOL)writeAsXMLToURL:(NSURL *)fileURL atomically:(BOOL)useAuxiliaryFile {
-    NSMutableString *xmlString = [[NSMutableString alloc] init];
-    
-    for (NSString *streamKey in self.streamKeys) {
-        NSDictionary *streamInfo = [self valuesForStreamKey:streamKey];
-        [xmlString appendFormat:@"<%@>\n", streamKey];
-        for (NSString *key in [streamInfo allKeys]) {
-            NSString *value = streamInfo[key];
-            [xmlString appendFormat:@"    <%@>%@</%@>\n", key, value, key];
-        }
-        [xmlString appendFormat:@"</%@>\n", streamKey];
-    }
-    
+
+    NSString * xmlString = [self xmlText];
     NSError *xmlError = nil;
     BOOL success = [xmlString writeToURL:fileURL
                               atomically:useAuxiliaryFile
@@ -265,7 +319,7 @@ static const NSInteger paddingLenth = 30;
 }
 
 + (NSString *)extensionForFormat:(MIKExportFormat)format {
-    NSString *extension = nil;
+    NSString *extension = @"";
     switch (format) {
         case MIKExportFormatTXT:   extension = @"txt";   break;
         case MIKExportFormatRTF:   extension = @"rtf";   break;

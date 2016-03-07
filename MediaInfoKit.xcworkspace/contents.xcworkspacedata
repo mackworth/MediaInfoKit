@@ -5,10 +5,13 @@
       location = "group:MediaInfoKit.podspec">
    </FileRef>
    <FileRef
-      location = "group:/Users/jeremyvizzini/GitHub/MediaInfoKit/LICENCE">
+      location = "group:LICENSE">
    </FileRef>
    <FileRef
       location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/hugh/Documents/Develop/MediaInfoKit/MediaInfoDemo/MediaInfo-Multi.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MediaInfoKit.xcodeproj">
