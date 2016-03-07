@@ -11,7 +11,7 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:MediaInfoDemo/MediaInfo Document.xcodeproj">
+      location = "group:/Users/hugh/Documents/Develop/MediaInfoKit/MediaInfoDemo/MediaInfo-Multi.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MediaInfoKit.xcodeproj">

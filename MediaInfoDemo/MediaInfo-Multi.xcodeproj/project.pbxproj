@@ -48,7 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E0419B21C76EAE700877DA5 /* MediaInfo Document.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediaInfo Document.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E0419B21C76EAE700877DA5 /* MediaInfo-Multi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediaInfo-Multi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0419B51C76EAE700877DA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E0419B61C76EAE700877DA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1E0419B91C76EAE700877DA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		1E0419B31C76EAE700877DA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E0419B21C76EAE700877DA5 /* MediaInfo Document.app */,
+				1E0419B21C76EAE700877DA5 /* MediaInfo-Multi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,9 +138,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E0419B11C76EAE700877DA5 /* MediaInfo Document */ = {
+		1E0419B11C76EAE700877DA5 /* MediaInfo-Multi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E0419C91C76EAE700877DA5 /* Build configuration list for PBXNativeTarget "MediaInfo Document" */;
+			buildConfigurationList = 1E0419C91C76EAE700877DA5 /* Build configuration list for PBXNativeTarget "MediaInfo-Multi" */;
 			buildPhases = (
 				1E0419AE1C76EAE700877DA5 /* Sources */,
 				1E0419AF1C76EAE700877DA5 /* Frameworks */,
@@ -152,9 +152,9 @@
 			dependencies = (
 				1EA3D9301C7A1C6C00DBFB23 /* PBXTargetDependency */,
 			);
-			name = "MediaInfo Document";
+			name = "MediaInfo-Multi";
 			productName = "MediaInfo Document";
-			productReference = 1E0419B21C76EAE700877DA5 /* MediaInfo Document.app */;
+			productReference = 1E0419B21C76EAE700877DA5 /* MediaInfo-Multi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +177,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1E0419AD1C76EAE700877DA5 /* Build configuration list for PBXProject "MediaInfo Document" */;
+			buildConfigurationList = 1E0419AD1C76EAE700877DA5 /* Build configuration list for PBXProject "MediaInfo-Multi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -196,7 +196,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1E0419B11C76EAE700877DA5 /* MediaInfo Document */,
+				1E0419B11C76EAE700877DA5 /* MediaInfo-Multi */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +349,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "pinetree.MediaInfo-Document";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MediaInfo-Multi";
 			};
 			name = Debug;
 		};
@@ -364,14 +364,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "pinetree.MediaInfo-Document";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MediaInfo-Multi";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E0419AD1C76EAE700877DA5 /* Build configuration list for PBXProject "MediaInfo Document" */ = {
+		1E0419AD1C76EAE700877DA5 /* Build configuration list for PBXProject "MediaInfo-Multi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E0419C71C76EAE700877DA5 /* Debug */,
@@ -380,7 +380,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E0419C91C76EAE700877DA5 /* Build configuration list for PBXNativeTarget "MediaInfo Document" */ = {
+		1E0419C91C76EAE700877DA5 /* Build configuration list for PBXNativeTarget "MediaInfo-Multi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E0419CA1C76EAE700877DA5 /* Debug */,
