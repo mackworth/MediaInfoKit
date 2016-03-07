@@ -88,12 +88,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  The string representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic, nullable) NSString *text;
+@property (readonly, strong, nonatomic) NSString *text;
 
 /**
  *  The formated string representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic, nullable) NSAttributedString *attributedText;
+@property (readonly, strong, nonatomic) NSAttributedString *attributedText;
 
 /**
  *  The XML representation of all the mediainfo information.
