@@ -2,13 +2,12 @@
 //  MIKMediaInfo.h
 //  MediaInfoKit
 //
-//  Created by Jeremy Vizzini.
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
 //
 
 #import <Cocoa/Cocoa.h>
-
 #import "MIKFormats.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - MIKMediaInfo
@@ -89,12 +88,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  The string representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic) NSString *text;
+@property (readonly, strong, nonatomic, nullable) NSString *text;
 
 /**
  *  The formated string representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic) NSAttributedString *attributedText;
+@property (readonly, strong, nonatomic, nullable) NSAttributedString *attributedText;
 
 /**
  *  The XML representation of all the mediainfo information.
@@ -104,19 +103,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  The JSON representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic) NSString *jsonText;
+@property (readonly, strong, nonatomic, nullable) NSString *jsonText;
 
 /**
- *  The JSON representation of all the mediainfo information.
+ *  The PLIST representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic) NSString *pListText;
+@property (readonly, strong, nonatomic, nullable) NSString *plistText;
 
 /**
  *  The contents of the receiver using the specified format.
  *
- *  @param format  The export format.
+ *  @param format The export format.
  */
--(NSAttributedString *) attributedTextForFormat: (MIKExportFormat) format ;
+- (nullable NSAttributedString *)attributedTextForFormat:(MIKExportFormat)format ;
 
 #pragma mark Enumeration
 

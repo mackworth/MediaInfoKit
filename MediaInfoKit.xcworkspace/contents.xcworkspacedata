@@ -2,22 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MediaInfoKit.podspec">
-   </FileRef>
-   <FileRef
       location = "group:LICENSE">
    </FileRef>
    <FileRef
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:/Users/hugh/Documents/Develop/MediaInfoKit/MediaInfoDemo/MediaInfo-Multi.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:MediaInfoKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MediaInfoDemo/MediaInfoDemo-Objc.xcodeproj">
+      location = "group:MediaInfoDemo/MediaInfoDemo-ObjC.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MediaInfoDemo/MediaInfoDemo-Swift.xcodeproj">

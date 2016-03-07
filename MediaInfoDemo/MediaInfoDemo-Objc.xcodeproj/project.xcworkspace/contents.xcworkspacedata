@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MediaInfoDemo-Objc.xcodeproj">
+      location = "self:/Users/jeremyvizzini/Downloads/MediaInfoKit-master/MediaInfoDemo/MediaInfoDemo-Multi.xcodeproj">
    </FileRef>
 </Workspace>

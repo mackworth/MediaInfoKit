@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  MediaInfoDemo-Multi
 //
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
@@ -7,6 +7,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface ViewController : NSViewController
 
 @end

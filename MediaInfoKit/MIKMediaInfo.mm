@@ -2,7 +2,6 @@
 //  MIKMediaInfo.m
 //  MediaInfoKit
 //
-//  Created by Jeremy Vizzini.
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
 //
 // References : https://mediaarea.net/fr/MediaInfo/Support/SDK/Quick_Start#Quick_Start
@@ -99,7 +98,6 @@ static const NSInteger paddingLenth = 30;
     return (_streamNames != nil) ? _streamNames : @[];
 }
 
-
 - (NSDictionary<NSString *, NSString *> *)valuesForStreamKey:(NSString *)streamKey {
     return (self.streamsInfo[streamKey]) ?: @{};
 }
@@ -174,7 +172,7 @@ static const NSInteger paddingLenth = 30;
     return text;
 }
 
--(NSString *) xmlText {
+-(NSString *)xmlText {
     NSMutableString *xmlString = [[NSMutableString alloc] init];
 
     for (NSString *streamKey in self.streamKeys) {
@@ -189,53 +187,56 @@ static const NSInteger paddingLenth = 30;
     return [NSString stringWithString:xmlString];
 }
 
--(NSString *) jsonText {
-    NSError * jsonError = nil;
+-(NSString *)jsonText {
+    NSError *jsonError = nil;
     NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:[self streams]
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&jsonError];
-    if (jsonData) {
-        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    } else {
-        NSLog(@"%@ %s jsonError: error: %@", self, __PRETTY_FUNCTION__,jsonError.localizedDescription);
-        return @"{}";
+                                                        options:NSJSONWritingPrettyPrinted
+                                                          error:&jsonError];
+    if (jsonError) {
+        NSLog(@"%@ %s jsonError: error: %@",
+              self,
+              __PRETTY_FUNCTION__,
+              jsonError.localizedDescription);
     }
+    if (!jsonData) {
+        return nil;
+    }
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
--(NSString *) pListText {
+-(NSString *)plistText {
     NSError * plistError = nil;
-    NSData * plistData =  [NSPropertyListSerialization dataWithPropertyList:[self streams] format:NSPropertyListXMLFormat_v1_0 options:0 error:&plistError];
+    NSData * plistData = [NSPropertyListSerialization dataWithPropertyList:[self streams]
+                                                                    format:NSPropertyListXMLFormat_v1_0
+                                                                   options:0
+                                                                     error:&plistError];
 
-    if (plistData) {
-        return [[NSString alloc] initWithData:plistData encoding:NSUTF8StringEncoding];
-    } else {
-        NSLog(@"%@ %s plistError: error: %@", self, __PRETTY_FUNCTION__,plistError.localizedDescription);
-        return @"{}";
+    if (plistError) {
+        NSLog(@"%@ %s plistError: error: %@",
+              self,
+              __PRETTY_FUNCTION__,
+              plistError.localizedDescription);
     }
+    if (!plistData) {
+        return nil;
+    }
+    return [[NSString alloc] initWithData:plistData encoding:NSUTF8StringEncoding];
 }
 
--(NSAttributedString *) attributedTextForFormat:(MIKExportFormat) format {
+-(NSAttributedString *)attributedTextForFormat:(MIKExportFormat)format {
+    NSString *text = nil;
     switch (format) {
-        case MIKExportFormatTXT:
-            return [[NSAttributedString alloc] initWithString: [self text]];
-            break;
-        case MIKExportFormatRTF:
-            return [self attributedText];
-            break;
-        case MIKExportFormatXML:
-            return [[NSAttributedString alloc] initWithString: [self xmlText]];
-            break;
-        case MIKExportFormatJSON:
-            return [[NSAttributedString alloc] initWithString: [self jsonText]];
-            break;
-        case MIKExportFormatPLIST:
-            return [[NSAttributedString alloc] initWithString: [self pListText]];
-            break;
+        case MIKExportFormatRTF:   return [self attributedText];
+        case MIKExportFormatTXT:   text = [self text];      break;
+        case MIKExportFormatXML:   text = [self xmlText];   break;
+        case MIKExportFormatJSON:  text = [self jsonText];  break;
+        case MIKExportFormatPLIST: text = [self plistText]; break;
         default:
             NSLog(@"%@ %s format argument is invalid", self, __PRETTY_FUNCTION__);
             break;
     }
-
+    return (text) ? [[NSAttributedString alloc] initWithString:text] : nil;
 }
 
 #pragma mark Enumeration
@@ -319,7 +320,7 @@ static const NSInteger paddingLenth = 30;
 }
 
 + (NSString *)extensionForFormat:(MIKExportFormat)format {
-    NSString *extension = @"";
+    NSString *extension = nil;
     switch (format) {
         case MIKExportFormatTXT:   extension = @"txt";   break;
         case MIKExportFormatRTF:   extension = @"rtf";   break;

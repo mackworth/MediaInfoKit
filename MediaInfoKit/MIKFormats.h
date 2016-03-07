@@ -2,15 +2,8 @@
 //  MIKFormats.h
 //  MediaInfoKit
 //
-//  Created by Hugh Mackworth on 2/20/16.
-//  Copyright © 2016 Jeremy Vizzini. All rights reserved.
+//  This software is released subject to licensing conditions as detailed in LICENCE.md
 //
-
-#ifndef MIKFormats_h
-#define MIKFormats_h
-
-
-#endif /* MIKFormats_h */
 
 /**
  *  The different export formats available.
