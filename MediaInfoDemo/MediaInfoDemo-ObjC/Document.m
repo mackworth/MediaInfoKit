@@ -1,6 +1,6 @@
 //
 //  Document.m
-//  MediaInfoDemo-Multi
+//  MediaInfoDemo-ObjC
 //
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
 //

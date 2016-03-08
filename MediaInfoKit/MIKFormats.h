@@ -1,5 +1,5 @@
 //
-//  MIKFormats.h
+//  MIKExportFormat.h
 //  MediaInfoKit
 //
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
