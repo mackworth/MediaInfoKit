@@ -18,5 +18,5 @@ FOUNDATION_EXPORT const unsigned char MediaInfoKitVersionString[];
 
 #import <MediaInfoKit/MIKMediaInfo.h>
 #import <MediaInfoKit/MIKConstants.h>
-#import "MediaInfoKit/MIKFormats.h"
+#import "MediaInfoKit/MIKFormat.h"
 

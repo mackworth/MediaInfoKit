@@ -34,8 +34,7 @@
 
 - (IBAction)saveDocumentAs:(id)sender {
     Document * document = (Document *)self.representedObject;
-    MIKExportFormat format = document.format;
-    NSString *formatExtension = [MIKMediaInfo extensionForFormat:format];
+    NSString *formatExtension = [MIKMediaInfo extensionForFormat:document.format];
 
     NSSavePanel *panel = [NSSavePanel savePanel];
     [panel setAllowedFileTypes:@[formatExtension]];

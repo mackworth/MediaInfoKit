@@ -29,7 +29,7 @@
     self = [super init];
     if (self) {
         self.attributedString = [[NSAttributedString alloc] initWithString:@"No Video File loaded."];
-        self.format = MIKExportFormatRTF;
+        self.format = MIKFormatRTF;
     }
     return self;
 }
@@ -66,11 +66,11 @@
     return [self.fileURL lastPathComponent];
 }
 
-- (MIKExportFormat) format {
+- (MIKFormat) format {
     return _format;
 }
 
-- (void)setFormat:(MIKExportFormat)format {
+- (void)setFormat:(MIKFormat)format {
     if (_format == format) {
         return;
     }

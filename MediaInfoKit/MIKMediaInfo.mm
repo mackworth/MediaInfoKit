@@ -224,14 +224,14 @@ static const NSInteger paddingLenth = 30;
     return [[NSString alloc] initWithData:plistData encoding:NSUTF8StringEncoding];
 }
 
--(NSAttributedString *)attributedTextForFormat:(MIKExportFormat)format {
+-(NSAttributedString *)attributedTextForFormat:(MIKFormat)format {
     NSString *text = nil;
     switch (format) {
-        case MIKExportFormatRTF:   return [self attributedText];
-        case MIKExportFormatTXT:   text = [self text];      break;
-        case MIKExportFormatXML:   text = [self xmlText];   break;
-        case MIKExportFormatJSON:  text = [self jsonText];  break;
-        case MIKExportFormatPLIST: text = [self plistText]; break;
+        case MIKFormatRTF:   return [self attributedText];
+        case MIKFormatTXT:   text = [self text];      break;
+        case MIKFormatXML:   text = [self xmlText];   break;
+        case MIKFormatJSON:  text = [self jsonText];  break;
+        case MIKFormatPLIST: text = [self plistText]; break;
         default:
             NSLog(@"%@ %s format argument is invalid", self, __PRETTY_FUNCTION__);
             break;
@@ -319,44 +319,31 @@ static const NSInteger paddingLenth = 30;
     return [[self streams] writeToURL:fileURL atomically:useAuxiliaryFile];
 }
 
-+ (NSString *)extensionForFormat:(MIKExportFormat)format {
++ (NSString *)extensionForFormat:(MIKFormat)format {
     NSString *extension = nil;
     switch (format) {
-        case MIKExportFormatTXT:   extension = @"txt";   break;
-        case MIKExportFormatRTF:   extension = @"rtf";   break;
-        case MIKExportFormatXML:   extension = @"xml";   break;
-        case MIKExportFormatJSON:  extension = @"json";  break;
-        case MIKExportFormatPLIST: extension = @"plist"; break;
+        case MIKFormatTXT:   extension = @"txt";   break;
+        case MIKFormatRTF:   extension = @"rtf";   break;
+        case MIKFormatXML:   extension = @"xml";   break;
+        case MIKFormatJSON:  extension = @"json";  break;
+        case MIKFormatPLIST: extension = @"plist"; break;
         default: break;
     }
     return extension;
 }
 
-- (BOOL)writeAsFormat:(MIKExportFormat)format toURL:(NSURL *)fileURL {
+- (BOOL)writeAsFormat:(MIKFormat)format toURL:(NSURL *)fileURL {
     return [self writeAsFormat:format toURL:fileURL atomically:YES];
 }
 
-- (BOOL)writeAsFormat:(MIKExportFormat)format
-                toURL:(NSURL *)fileURL
-           atomically:(BOOL)flag
-{
+- (BOOL)writeAsFormat:(MIKFormat)format toURL:(NSURL *)fileURL atomically:(BOOL)flag {
     BOOL success = NO;
     switch (format) {
-        case MIKExportFormatTXT:
-            success = [self writeAsTXTToURL:fileURL atomically:flag];
-            break;
-        case MIKExportFormatRTF:
-            success = [self writeAsRTFToURL:fileURL atomically:flag];
-            break;
-        case MIKExportFormatXML:
-            success = [self writeAsXMLToURL:fileURL atomically:flag];
-            break;
-        case MIKExportFormatJSON:
-            success = [self writeAsJSONToURL:fileURL atomically:flag];
-            break;
-        case MIKExportFormatPLIST:
-            success = [self writeAsPLISTToURL:fileURL atomically:flag];
-            break;
+        case MIKFormatTXT:   success = [self writeAsTXTToURL:fileURL atomically:flag];   break;
+        case MIKFormatRTF:   success = [self writeAsRTFToURL:fileURL atomically:flag];   break;
+        case MIKFormatXML:   success = [self writeAsXMLToURL:fileURL atomically:flag];   break;
+        case MIKFormatJSON:  success = [self writeAsJSONToURL:fileURL atomically:flag];  break;
+        case MIKFormatPLIST: success = [self writeAsPLISTToURL:fileURL atomically:flag]; break;
         default:
             NSLog(@"%@ %s format argument is invalid", self, __PRETTY_FUNCTION__);
             break;

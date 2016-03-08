@@ -12,7 +12,7 @@
 
 @property (nullable, readonly) NSString *baseFilename;
 @property (nonnull,  readonly) NSAttributedString *attributedString;
-@property (assign,  readwrite) MIKExportFormat format;
+@property (assign,  readwrite) MIKFormat format;
 
 - (void)openMovieFile;
 - (BOOL)writeToURL:(nonnull NSURL *)fileURL;

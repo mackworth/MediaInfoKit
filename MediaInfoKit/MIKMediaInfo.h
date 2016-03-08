@@ -6,7 +6,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MIKFormats.h"
+#import "MIKFormat.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -115,7 +115,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param format The export format.
  */
-- (nullable NSAttributedString *)attributedTextForFormat:(MIKExportFormat)format ;
+- (nullable NSAttributedString *)attributedTextForFormat:(MIKFormat)format ;
 
 #pragma mark Enumeration
 
@@ -152,7 +152,7 @@ typedef void(^MIKStreamEnumerationBlock)(NSString *key, NSString *value);
  *
  *  @return The file extension or nil if the format doesn't exist.
  */
-+ (NSString *)extensionForFormat:(MIKExportFormat)format;
++ (NSString *)extensionForFormat:(MIKFormat)format;
 
 /**
  *  Writes the contents of the receiver to the URL specified by url using the specified format.
@@ -162,7 +162,7 @@ typedef void(^MIKStreamEnumerationBlock)(NSString *key, NSString *value);
  *
  *  @return true if the URL is written successfully, otherwise false
  */
-- (BOOL)writeAsFormat:(MIKExportFormat)format toURL:(NSURL *)fileURL;
+- (BOOL)writeAsFormat:(MIKFormat)format toURL:(NSURL *)fileURL;
 
 /**
  *  Writes the contents of the receiver to the URL specified by url using the specified format.
@@ -173,7 +173,7 @@ typedef void(^MIKStreamEnumerationBlock)(NSString *key, NSString *value);
  *
  *  @return true if the URL is written successfully, otherwise false
  */
-- (BOOL)writeAsFormat:(MIKExportFormat)format toURL:(NSURL *)fileURL atomically:(BOOL)flag;
+- (BOOL)writeAsFormat:(MIKFormat)format toURL:(NSURL *)fileURL atomically:(BOOL)flag;
 
 #pragma mark Change language
 
