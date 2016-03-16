@@ -7,25 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		268EE8AC1BA8A6B300D294E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268EE8AB1BA8A6B300D294E9 /* AppDelegate.m */; };
-		268EE8AF1BA8A6B300D294E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268EE8AE1BA8A6B300D294E9 /* main.m */; };
-		268EE8B41BA8A6B300D294E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268EE8B21BA8A6B300D294E9 /* MainMenu.xib */; };
-		268EEBD21BA8CC4700D294E9 /* BBB.mov in Resources */ = {isa = PBXBuildFile; fileRef = 268EEBD11BA8CC4700D294E9 /* BBB.mov */; settings = {ASSET_TAGS = (); }; };
-		268EEBDA1BA8CCB600D294E9 /* MediaInfoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEBD81BA8CC9D00D294E9 /* MediaInfoKit.framework */; };
-		268EEBDB1BA8CCB600D294E9 /* MediaInfoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 268EEBD81BA8CC9D00D294E9 /* MediaInfoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1EA3D9311C7A1CEB00DBFB23 /* MediaInfoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA3D92B1C7956E400DBFB23 /* MediaInfoKit.framework */; };
+		1EA3D9331C7A1D4600DBFB23 /* MediaInfoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1EA3D92B1C7956E400DBFB23 /* MediaInfoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		26D2B8CB1C8E23C900267B27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D2B8BF1C8E23C900267B27 /* AppDelegate.m */; };
+		26D2B8CD1C8E23C900267B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D2B8C21C8E23C900267B27 /* Main.storyboard */; };
+		26D2B8CE1C8E23C900267B27 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D2B8C51C8E23C900267B27 /* Document.m */; };
+		26D2B8D01C8E23C900267B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D2B8C71C8E23C900267B27 /* main.m */; };
+		26D2B8D21C8E23C900267B27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D2B8CA1C8E23C900267B27 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		268EEBD71BA8CC9D00D294E9 /* PBXContainerItemProxy */ = {
+		1EA3D92A1C7956E400DBFB23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 268EEBD31BA8CC9D00D294E9 /* MediaInfoKit.xcodeproj */;
+			containerPortal = 1EA3D9261C7956E400DBFB23 /* MediaInfoKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 268EEB051BA8C79B00D294E9;
 			remoteInfo = MediaInfoKit;
 		};
-		268EEBDC1BA8CCB600D294E9 /* PBXContainerItemProxy */ = {
+		1EA3D92F1C7A1C6C00DBFB23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 268EEBD31BA8CC9D00D294E9 /* MediaInfoKit.xcodeproj */;
+			containerPortal = 1EA3D9261C7956E400DBFB23 /* MediaInfoKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 268EEB041BA8C79B00D294E9;
 			remoteInfo = MediaInfoKit;
@@ -33,125 +34,147 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		268EEA391BA8AA0A00D294E9 /* CopyFiles */ = {
+		1EA3D9321C7A1D3A00DBFB23 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				268EEBDB1BA8CCB600D294E9 /* MediaInfoKit.framework in CopyFiles */,
+				1EA3D9331C7A1D4600DBFB23 /* MediaInfoKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		268EE8A71BA8A6B300D294E9 /* MediaInfoDemo-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediaInfoDemo-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		268EE8AA1BA8A6B300D294E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		268EE8AB1BA8A6B300D294E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		268EE8AE1BA8A6B300D294E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		268EE8B31BA8A6B300D294E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		268EE8B51BA8A6B300D294E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		268EEBD11BA8CC4700D294E9 /* BBB.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BBB.mov; sourceTree = SOURCE_ROOT; };
-		268EEBD31BA8CC9D00D294E9 /* MediaInfoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaInfoKit.xcodeproj; path = ../MediaInfoKit.xcodeproj; sourceTree = "<group>"; };
+		1E0419B21C76EAE700877DA5 /* MediaInfoDemo-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediaInfoDemo-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA3D9261C7956E400DBFB23 /* MediaInfoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaInfoKit.xcodeproj; path = ../MediaInfoKit.xcodeproj; sourceTree = "<group>"; };
+		26D2B8BE1C8E23C900267B27 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "MediaInfoDemo-ObjC/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		26D2B8BF1C8E23C900267B27 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "MediaInfoDemo-ObjC/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		26D2B8C31C8E23C900267B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		26D2B8C41C8E23C900267B27 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Document.h; path = "MediaInfoDemo-ObjC/Document.h"; sourceTree = SOURCE_ROOT; };
+		26D2B8C51C8E23C900267B27 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Document.m; path = "MediaInfoDemo-ObjC/Document.m"; sourceTree = SOURCE_ROOT; };
+		26D2B8C61C8E23C900267B27 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "MediaInfoDemo-ObjC/Info.plist"; sourceTree = SOURCE_ROOT; };
+		26D2B8C71C8E23C900267B27 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "MediaInfoDemo-ObjC/main.m"; sourceTree = SOURCE_ROOT; };
+		26D2B8C91C8E23C900267B27 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "MediaInfoDemo-ObjC/ViewController.h"; sourceTree = SOURCE_ROOT; };
+		26D2B8CA1C8E23C900267B27 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "MediaInfoDemo-ObjC/ViewController.m"; sourceTree = SOURCE_ROOT; };
+		26D2B8D31C8E243C00267B27 /* MediaInfoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MediaInfoDemo.entitlements; path = "MediaInfoDemo-ObjC/MediaInfoDemo.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		268EE8A41BA8A6B300D294E9 /* Frameworks */ = {
+		1E0419AF1C76EAE700877DA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268EEBDA1BA8CCB600D294E9 /* MediaInfoKit.framework in Frameworks */,
+				1EA3D9311C7A1CEB00DBFB23 /* MediaInfoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		268EE89E1BA8A6B300D294E9 = {
+		1E0419A91C76EAE700877DA5 = {
 			isa = PBXGroup;
 			children = (
-				268EE8A91BA8A6B300D294E9 /* MediaInfoDemo */,
-				268EEBD91BA8CCA000D294E9 /* Frameworks */,
-				268EE8A81BA8A6B300D294E9 /* Products */,
+				26D2B8D31C8E243C00267B27 /* MediaInfoDemo.entitlements */,
+				26D2B89E1C8E1E9100267B27 /* MediaInfoDemo */,
+				1E0419B31C76EAE700877DA5 /* Products */,
+				1EA3D9251C7956D800DBFB23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		268EE8A81BA8A6B300D294E9 /* Products */ = {
+		1E0419B31C76EAE700877DA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				268EE8A71BA8A6B300D294E9 /* MediaInfoDemo-Objc.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		268EE8A91BA8A6B300D294E9 /* MediaInfoDemo */ = {
-			isa = PBXGroup;
-			children = (
-				268EEBD11BA8CC4700D294E9 /* BBB.mov */,
-				268EE8AA1BA8A6B300D294E9 /* AppDelegate.h */,
-				268EE8AB1BA8A6B300D294E9 /* AppDelegate.m */,
-				268EE8B21BA8A6B300D294E9 /* MainMenu.xib */,
-				268EE8B51BA8A6B300D294E9 /* Info.plist */,
-				268EE8AE1BA8A6B300D294E9 /* main.m */,
-			);
-			name = MediaInfoDemo;
-			path = "MediaInfoDemo-Objc";
-			sourceTree = "<group>";
-		};
-		268EEBD41BA8CC9D00D294E9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				268EEBD81BA8CC9D00D294E9 /* MediaInfoKit.framework */,
+				1E0419B21C76EAE700877DA5 /* MediaInfoDemo-ObjC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		268EEBD91BA8CCA000D294E9 /* Frameworks */ = {
+		1EA3D9251C7956D800DBFB23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				268EEBD31BA8CC9D00D294E9 /* MediaInfoKit.xcodeproj */,
+				1EA3D9261C7956E400DBFB23 /* MediaInfoKit.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1EA3D9271C7956E400DBFB23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EA3D92B1C7956E400DBFB23 /* MediaInfoKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26D2B89E1C8E1E9100267B27 /* MediaInfoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				26D2B8BE1C8E23C900267B27 /* AppDelegate.h */,
+				26D2B8BF1C8E23C900267B27 /* AppDelegate.m */,
+				26D2B8C41C8E23C900267B27 /* Document.h */,
+				26D2B8C51C8E23C900267B27 /* Document.m */,
+				26D2B8C91C8E23C900267B27 /* ViewController.h */,
+				26D2B8CA1C8E23C900267B27 /* ViewController.m */,
+				26D2B8C11C8E23C900267B27 /* Base.lproj */,
+				26D2B8C61C8E23C900267B27 /* Info.plist */,
+				26D2B8C71C8E23C900267B27 /* main.m */,
+			);
+			name = MediaInfoDemo;
+			path = "MediaInfoDemo-Multi";
+			sourceTree = "<group>";
+		};
+		26D2B8C11C8E23C900267B27 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				26D2B8C21C8E23C900267B27 /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = "MediaInfoDemo-ObjC/Base.lproj";
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		268EE8A61BA8A6B300D294E9 /* MediaInfoDemo-Objc */ = {
+		1E0419B11C76EAE700877DA5 /* MediaInfoDemo-ObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 268EE8B81BA8A6B300D294E9 /* Build configuration list for PBXNativeTarget "MediaInfoDemo-Objc" */;
+			buildConfigurationList = 1E0419C91C76EAE700877DA5 /* Build configuration list for PBXNativeTarget "MediaInfoDemo-ObjC" */;
 			buildPhases = (
-				268EE8A31BA8A6B300D294E9 /* Sources */,
-				268EE8A41BA8A6B300D294E9 /* Frameworks */,
-				268EE8A51BA8A6B300D294E9 /* Resources */,
-				268EEA391BA8AA0A00D294E9 /* CopyFiles */,
+				1E0419AE1C76EAE700877DA5 /* Sources */,
+				1E0419AF1C76EAE700877DA5 /* Frameworks */,
+				1E0419B01C76EAE700877DA5 /* Resources */,
+				1EA3D9321C7A1D3A00DBFB23 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				268EEBDD1BA8CCB600D294E9 /* PBXTargetDependency */,
+				1EA3D9301C7A1C6C00DBFB23 /* PBXTargetDependency */,
 			);
-			name = "MediaInfoDemo-Objc";
-			productName = "MediaInfoDemo-Objc";
-			productReference = 268EE8A71BA8A6B300D294E9 /* MediaInfoDemo-Objc.app */;
+			name = "MediaInfoDemo-ObjC";
+			productName = "MediaInfo Document";
+			productReference = 1E0419B21C76EAE700877DA5 /* MediaInfoDemo-ObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		268EE89F1BA8A6B300D294E9 /* Project object */ = {
+		1E0419AA1C76EAE700877DA5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Jeremy Vizzini";
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hugh Mackworth";
 				TargetAttributes = {
-					268EE8A61BA8A6B300D294E9 = {
-						CreatedOnToolsVersion = 7.0;
+					1E0419B11C76EAE700877DA5 = {
+						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 268EE8A21BA8A6B300D294E9 /* Build configuration list for PBXProject "MediaInfoDemo-Objc" */;
+			buildConfigurationList = 1E0419AD1C76EAE700877DA5 /* Build configuration list for PBXProject "MediaInfoDemo-ObjC" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -159,80 +182,81 @@
 				en,
 				Base,
 			);
-			mainGroup = 268EE89E1BA8A6B300D294E9;
-			productRefGroup = 268EE8A81BA8A6B300D294E9 /* Products */;
+			mainGroup = 1E0419A91C76EAE700877DA5;
+			productRefGroup = 1E0419B31C76EAE700877DA5 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 268EEBD41BA8CC9D00D294E9 /* Products */;
-					ProjectRef = 268EEBD31BA8CC9D00D294E9 /* MediaInfoKit.xcodeproj */;
+					ProductGroup = 1EA3D9271C7956E400DBFB23 /* Products */;
+					ProjectRef = 1EA3D9261C7956E400DBFB23 /* MediaInfoKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				268EE8A61BA8A6B300D294E9 /* MediaInfoDemo-Objc */,
+				1E0419B11C76EAE700877DA5 /* MediaInfoDemo-ObjC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		268EEBD81BA8CC9D00D294E9 /* MediaInfoKit.framework */ = {
+		1EA3D92B1C7956E400DBFB23 /* MediaInfoKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MediaInfoKit.framework;
-			remoteRef = 268EEBD71BA8CC9D00D294E9 /* PBXContainerItemProxy */;
+			remoteRef = 1EA3D92A1C7956E400DBFB23 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		268EE8A51BA8A6B300D294E9 /* Resources */ = {
+		1E0419B01C76EAE700877DA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268EE8B41BA8A6B300D294E9 /* MainMenu.xib in Resources */,
-				268EEBD21BA8CC4700D294E9 /* BBB.mov in Resources */,
+				26D2B8CD1C8E23C900267B27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		268EE8A31BA8A6B300D294E9 /* Sources */ = {
+		1E0419AE1C76EAE700877DA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268EE8AF1BA8A6B300D294E9 /* main.m in Sources */,
-				268EE8AC1BA8A6B300D294E9 /* AppDelegate.m in Sources */,
+				26D2B8CE1C8E23C900267B27 /* Document.m in Sources */,
+				26D2B8D01C8E23C900267B27 /* main.m in Sources */,
+				26D2B8D21C8E23C900267B27 /* ViewController.m in Sources */,
+				26D2B8CB1C8E23C900267B27 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		268EEBDD1BA8CCB600D294E9 /* PBXTargetDependency */ = {
+		1EA3D9301C7A1C6C00DBFB23 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MediaInfoKit;
-			targetProxy = 268EEBDC1BA8CCB600D294E9 /* PBXContainerItemProxy */;
+			targetProxy = 1EA3D92F1C7A1C6C00DBFB23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		268EE8B21BA8A6B300D294E9 /* MainMenu.xib */ = {
+		26D2B8C21C8E23C900267B27 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				268EE8B31BA8A6B300D294E9 /* Base */,
+				26D2B8C31C8E23C900267B27 /* Base */,
 			);
-			name = MainMenu.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		268EE8B61BA8A6B300D294E9 /* Debug */ = {
+		1E0419C71C76EAE700877DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -265,17 +289,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		268EE8B71BA8A6B300D294E9 /* Release */ = {
+		1E0419C81C76EAE700877DA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -302,62 +327,63 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		268EE8B91BA8A6B300D294E9 /* Debug */ = {
+		1E0419CA1C76EAE700877DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MediaInfoDemo-ObjC/MediaInfoDemo.entitlements";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "MediaInfoDemo-Objc/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MediaInfoDemo-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremyvizzini.com.MediaInfoDemo-Objc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremyvizzini.MediaInfoDemo-ObjC";
+				PRODUCT_NAME = "MediaInfoDemo-ObjC";
 			};
 			name = Debug;
 		};
-		268EE8BA1BA8A6B300D294E9 /* Release */ = {
+		1E0419CB1C76EAE700877DA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MediaInfoDemo-ObjC/MediaInfoDemo.entitlements";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "MediaInfoDemo-Objc/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MediaInfoDemo-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremyvizzini.com.MediaInfoDemo-Objc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremyvizzini.MediaInfoDemo-ObjC";
+				PRODUCT_NAME = "MediaInfoDemo-ObjC";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		268EE8A21BA8A6B300D294E9 /* Build configuration list for PBXProject "MediaInfoDemo-Objc" */ = {
+		1E0419AD1C76EAE700877DA5 /* Build configuration list for PBXProject "MediaInfoDemo-ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				268EE8B61BA8A6B300D294E9 /* Debug */,
-				268EE8B71BA8A6B300D294E9 /* Release */,
+				1E0419C71C76EAE700877DA5 /* Debug */,
+				1E0419C81C76EAE700877DA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		268EE8B81BA8A6B300D294E9 /* Build configuration list for PBXNativeTarget "MediaInfoDemo-Objc" */ = {
+		1E0419C91C76EAE700877DA5 /* Build configuration list for PBXNativeTarget "MediaInfoDemo-ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				268EE8B91BA8A6B300D294E9 /* Debug */,
-				268EE8BA1BA8A6B300D294E9 /* Release */,
+				1E0419CA1C76EAE700877DA5 /* Debug */,
+				1E0419CB1C76EAE700877DA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 268EE89F1BA8A6B300D294E9 /* Project object */;
+	rootObject = 1E0419AA1C76EAE700877DA5 /* Project object */;
 }

@@ -2,7 +2,6 @@
 //  MediaInfoKit.h
 //  MediaInfoKit
 //
-//  Created by Jeremy Vizzini.
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
 //
 
@@ -19,4 +18,5 @@ FOUNDATION_EXPORT const unsigned char MediaInfoKitVersionString[];
 
 #import <MediaInfoKit/MIKMediaInfo.h>
 #import <MediaInfoKit/MIKConstants.h>
+#import <MediaInfoKit/MIKFormat.h>
 

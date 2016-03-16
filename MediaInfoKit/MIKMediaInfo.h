@@ -2,13 +2,12 @@
 //  MIKMediaInfo.h
 //  MediaInfoKit
 //
-//  Created by Jeremy Vizzini.
 //  This software is released subject to licensing conditions as detailed in LICENCE.md
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MIKFormat.h"
 
-#import "MIKFormats.h"
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - MIKMediaInfo
@@ -104,19 +103,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  The JSON representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic) NSString *jsonText;
+@property (readonly, strong, nonatomic, nullable) NSString *jsonText;
 
 /**
- *  The JSON representation of all the mediainfo information.
+ *  The PLIST representation of all the mediainfo information.
  */
-@property (readonly, strong, nonatomic) NSString *pListText;
+@property (readonly, strong, nonatomic, nullable) NSString *plistText;
 
 /**
  *  The contents of the receiver using the specified format.
  *
- *  @param format  The export format.
+ *  @param format The export format.
  */
--(NSAttributedString *) attributedTextForFormat: (MIKExportFormat) format ;
+- (nullable NSAttributedString *)attributedTextForFormat:(MIKFormat)format ;
 
 #pragma mark Enumeration
 
@@ -153,7 +152,7 @@ typedef void(^MIKStreamEnumerationBlock)(NSString *key, NSString *value);
  *
  *  @return The file extension or nil if the format doesn't exist.
  */
-+ (NSString *)extensionForFormat:(MIKExportFormat)format;
++ (NSString *)extensionForFormat:(MIKFormat)format;
 
 /**
  *  Writes the contents of the receiver to the URL specified by url using the specified format.
@@ -163,7 +162,7 @@ typedef void(^MIKStreamEnumerationBlock)(NSString *key, NSString *value);
  *
  *  @return true if the URL is written successfully, otherwise false
  */
-- (BOOL)writeAsFormat:(MIKExportFormat)format toURL:(NSURL *)fileURL;
+- (BOOL)writeAsFormat:(MIKFormat)format toURL:(NSURL *)fileURL;
 
 /**
  *  Writes the contents of the receiver to the URL specified by url using the specified format.
@@ -174,7 +173,7 @@ typedef void(^MIKStreamEnumerationBlock)(NSString *key, NSString *value);
  *
  *  @return true if the URL is written successfully, otherwise false
  */
-- (BOOL)writeAsFormat:(MIKExportFormat)format toURL:(NSURL *)fileURL atomically:(BOOL)flag;
+- (BOOL)writeAsFormat:(MIKFormat)format toURL:(NSURL *)fileURL atomically:(BOOL)flag;
 
 #pragma mark Change language
 

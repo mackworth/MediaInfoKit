@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E0419F11C7925B700877DA5 /* MIKFormats.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0419F01C7925B700877DA5 /* MIKFormats.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E0419F11C7925B700877DA5 /* MIKFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0419F01C7925B700877DA5 /* MIKFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26194ED81BD2FC5B00F1FB25 /* libmediainfo.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 268EEB741BA8C94900D294E9 /* libmediainfo.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2624A61A1BD2FF8C000C340B /* libmediainfo.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EEB741BA8C94900D294E9 /* libmediainfo.0.dylib */; };
 		268EEB091BA8C79B00D294E9 /* MediaInfoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 268EEB081BA8C79B00D294E9 /* MediaInfoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,7 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E0419F01C7925B700877DA5 /* MIKFormats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIKFormats.h; sourceTree = "<group>"; };
+		1E0419F01C7925B700877DA5 /* MIKFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIKFormat.h; sourceTree = "<group>"; };
 		268EEB051BA8C79B00D294E9 /* MediaInfoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MediaInfoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		268EEB081BA8C79B00D294E9 /* MediaInfoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaInfoKit.h; sourceTree = "<group>"; };
 		268EEB0A1BA8C79B00D294E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				268EEB081BA8C79B00D294E9 /* MediaInfoKit.h */,
-				1E0419F01C7925B700877DA5 /* MIKFormats.h */,
+				1E0419F01C7925B700877DA5 /* MIKFormat.h */,
 				268EEB101BA8C89400D294E9 /* MIKMediaInfo.h */,
 				268EEB111BA8C89400D294E9 /* MIKMediaInfo.mm */,
 				26C3EA531BE75CF400CC0EF6 /* MIKConstants.h */,
@@ -350,7 +350,7 @@
 				268EEB161BA8C89400D294E9 /* NSString+MIK.h in Headers */,
 				26C3EA551BE75CF400CC0EF6 /* MIKConstants.h in Headers */,
 				268EEBB91BA8C94900D294E9 /* MediaInfoDLL.h in Headers */,
-				1E0419F11C7925B700877DA5 /* MIKFormats.h in Headers */,
+				1E0419F11C7925B700877DA5 /* MIKFormat.h in Headers */,
 				268EEB091BA8C79B00D294E9 /* MediaInfoKit.h in Headers */,
 				268EEB141BA8C89400D294E9 /* MIKMediaInfo.h in Headers */,
 			);

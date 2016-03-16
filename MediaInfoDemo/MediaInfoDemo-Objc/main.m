@@ -1,9 +1,9 @@
 //
 //  main.m
-//  MediaInfoDemo-Objc
+//  MediaInfo Document
 //
-//  Created by Jeremy Vizzini on 15/09/15.
-//  Copyright © 2015 Jeremy Vizzini. All rights reserved.
+//  Created by Hugh Mackworth on 2/18/16.
+//  Copyright © 2016 Hugh Mackworth. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
